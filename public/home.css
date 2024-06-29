@@ -1,0 +1,162 @@
+body{
+    background-color: aliceblue;
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+li :hover{
+    border-bottom: 2px solid black;
+}
+ul{
+    list-style: none;
+}
+.container{
+    display: flex;
+}
+.nav{
+    display: flex;
+    gap: 20px;
+}
+.nav1{
+    display: flex;
+    gap: 40px;
+    margin-left:500px ;
+    margin-top: 40px;
+}
+.New{
+    margin-left: 30px;
+    color: #000;
+    font-weight:600;
+    font-size: 15px;
+    text-align: center;
+    width: 50px;
+    background-color: rgb(238, 188, 35);
+}
+.Learn{
+    margin-left: 30px;
+    background-color: #4760ce;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    font-size: 13px;
+}
+.Top{
+    background-color: #fff;
+    width: 500px;
+    margin-left: 100px;
+    height:300px;
+
+}
+.imp{
+    background-color: #4760ce;
+    width:1400px;
+    height: 400px;
+}
+.Tree :hover{
+   border-bottom: none;
+}
+.Meet{
+    margin-left: 30px;
+}
+.flex2{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.flex1{
+    height: 400px;
+}
+.flex2 li{
+    justify-content: center;
+    padding-left: 100px;
+    box-shadow: 2px 2px 5px;
+    height: 350px;
+}
+.flex1 li :hover {
+    border-bottom: none;
+}
+.o{
+    padding-right: 100px;
+    height: 400px;
+    width:300px;
+}
+.flex2 li {
+    background-color: rgb(242, 227, 16);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.flex2 li :hover {
+    border-bottom: none;
+}
+.flex2 li:active {
+    color: rgb(244, 249, 245);
+    background-color: rgb(39, 83, 58);
+    transform: translateY(4px);
+}
+
+
+.flex2 :hover{
+    color: rgb(90, 14, 241);
+}
+.b{
+    background-color: rgb(236, 164, 96);
+    color: rgb(247, 244, 249);
+    font-size: 30px;
+}
+ .Cartopt{
+    background-color: black;
+    color: white;
+    position: fixed;
+    opacity: 0%;
+    right: 100px;
+    width: 400px;
+    height: 600px;
+    transition: 0.5s;
+}
+.Cartopt .b1{
+    margin-top: 120px;
+    height:80px;
+    width: 200px;
+    background-color: white;
+    color: black;
+}
+.Cartopt .room{
+    display: flex;
+}
+.Cartopt .b2{
+    margin-top: 120px;
+    height:80px;
+    width: 200px;
+    background-color: rgb(221, 254, 8);
+    color: black;
+}
+.Cartopt .item{
+    background-color: rgb(230, 242, 218);
+    height: 60px;
+    display: flex;
+    color: #000;
+    gap: 30px;
+    justify-self: center;
+}
+.Cartopt .item1{
+    background-color: rgb(195, 247, 143);
+    height: 60px;
+    display: flex;
+    color: #000;
+    gap: 30px;
+    justify-self: center;
+}
+body.show .Cartopt{
+    opacity: 100%;
+}
+.qt{
+    margin-bottom: 10px;
+}
+

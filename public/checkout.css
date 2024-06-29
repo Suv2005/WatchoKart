@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(153, 153, 244);
+    font-family: sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.conatiner{
+    height: 360px;
+    width: 400px;
+    background-color: antiquewhite;
+    margin-left: 33%;
+    margin-top: 200px;
+}
+.name{
+    font-size: 30px;
+}
+.small{
+    font-size: 30px
+}
+.big{
+    font-size: 30px;
+}
+.btn{
+    background-color: rgb(238, 254, 20);
+    color: rgb(16, 15, 15);
+    font-size: 30px;
+}

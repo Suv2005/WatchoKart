@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+        <link rel="stylesheet" href="/home.css">
+</head>
+<body class="">
+    <div class="Cartopt">
+        <h1>Your Cart</h1>
+        <div class="item">
+            <img src="1.jpeg" height="40px" width="40px">
+            <button class="add" onclick="sum()">+</button>
+            <p id="quantity" class="qt">Quantity:0</p>
+            <button class="minus" onclick="minus()">-</button>
+        </div>
+         <div class="item1">
+            <img src="2.jpeg" height="40px" width="40px">
+            <button class="add" onclick="sum1()">+</button>
+            <p id="quantity1" class="qt">Quantity:0</p>
+            <button class="minus" onclick="minus1()">-</button>
+        </div>
+        <div class="item">
+            <img src="3.jpeg" height="40px" width="40px">
+            <button class="add" onclick="sum2()">+</button>
+            <p id="quantity2" class="qt">Quantity:0</p>
+            <button class="minus" onclick="minus2()">-</button>
+        </div>
+        <div class="item1">
+            <img src="4.jpeg" height="40px" width="40px">
+            <button class="add" onclick="sum3()">+</button>
+            <p id="quantity3" class="qt">Quantity:0</p>
+            <button class="minus" onclick="minus3()">-</button>
+        </div>
+        <div class="item">
+            <img src="5.jpeg" height="40px" width="40px">
+            <button class="add" onclick="sum4()">+</button>
+            <p id="quantity4" class="qt">Quantity:0</p>
+            <button class="minus" onclick="minus4()">-</button>
+        </div>
+        <div class="item1">
+            <img src="6.jpeg" height="40px" width="40px">
+            <button class="add" onclick="sum5()">+</button>
+            <p id="quantity5" class="qt">Quantity:0</p>
+            <button class="minus" onclick="minus5()">-</button>
+        </div>
+        <div class="room">
+        <button class="b1" onclick="closeall()">Close</button>
+        <a href="/checkout"><button class="b2">CheckOut</button></a>
+        </div>
+        </div>
+    <div class="Container">
+        <ul class="nav">
+            <h1 class="title">WatchoMart</h1>
+            <div class="nav1">
+           <li><a href="/">Logout</a></li>
+            <li id="cart" class="CART"><a href="#">Add To cart</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="/"> Hi&nbsp;{{name}} !!</a></li>
+            <li><a href="#">Home</a></li>
+
+            <nav1>
+        </ul>
+        <a class="Tree" href="#">
+             <div class="imp">
+               <br>
+               <header class="Top">
+                  <br>
+                  <h4 class="New">New</h4>
+                  <h1 class="Meet">WatchoMart</h1>
+                  <p class="op">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mart that provide the best dress design<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  trusted by many people</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;over the years.</p>
+                  <h2 class="Learn">Learn More</h2>
+                </header>   
+            </div>
+        </a>
+        <br><br>
+         </div>
+        <br><br><br>
+        <h1 id="P">Sonata</h1>
+        <div class="flex1">
+            <ul class="flex2">
+               <li class="o"><img src="4.jpeg" height="200px" width="200px"><h4>Price: Rs 6999</h4><p>Sonata Men Synthetic White Dial Analog Watch -Nr7930Pp01, Band Color-Black</p><button class="b" >Buy</button><button onclick="ad();" class="b">Add to cart</button></li>
+               <li class="o"><img src="5.jpeg" height="200px" width="200px"><h4>Price: Rs 7999<p>Sonata Quartz Analog with Day and Date Silver Dial Stainless Steel Strap Watch</p><button class="b">Buy</button><button onclick="ad1();" class="b">Add to cart</button></li>
+               <li class="o"><img src="6.jpeg" height="200px" width="200px"><h4>Price: Rs 8999<p>Click to open expanded view Sonata Analog Champagne Dial Men's Watch</p><button class="b">Buy</button><button onclick="ad2();" class="b">Add to cart</button></li>
+            </ul>
+        </div>
+        <br><br>
+        <h1>Titan</h1>
+        <div class="flex1">
+            <ul class="flex2">
+               <li class="o"><img src="download.jpeg" height="200px" width="200px"><h4>Price: Rs 6999<p>Titan Men Black Analogue Watch</p><button class="b">Buy</button><button onclick="ad3();" class="b">Add to cart</button></li>
+               <li class="o"><img src="2.jpeg" height="200px" width="200px"><h4>Price: Rs 5999<p>Men Silver-Toned Analogue Watch</p><button class="b">Buy</button><button class="b" onclick="ad4();">Add to cart</button></li>
+               <li class="o"><img src="3.jpeg" height="200px" width="200px"><h4>Price: Rs 4999<p>Men Silver-Toned Analogue Watch 1584YM02</p><button class="b">Buy</button><button class="b" onclick="ad5();">Add to cart</button></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        let carticon= document.querySelector(".CART");
+        let body=document.querySelector("body");
+        let Qty=0;
+        let Qty1=0;
+        let Qty2=0;
+        let Qty3=0;
+        let Qty4=0;
+        let Qty5=0;
+        let Sum=0;
+
+        carticon.addEventListener('click',()=>{
+            body.classList.toggle('show');
+        })
+        function closeall(){
+            body.classList.toggle('show');
+        }
+        let cart=0;
+       function ad(){
+        Sum+=6999;
+       cart++;
+       Qty++;
+        let quantity=document.getElementById("quantity");
+        
+        quantity.innerHTML= `<p id="quantity">Quantity: ${Qty}</p>`
+       let cartElement = document.getElementById("cart");
+
+       cartElement.innerHTML = `<a href="#">Cart: ${cart}</a>`;
+
+       }
+       function ad1(){
+       cart++;
+       Qty1++;
+       Sum+=7999;
+        let quantity1=document.getElementById("quantity1");
+        
+        quantity1.innerHTML= `<p id="quantity1">Quantity: ${Qty1}</p>`
+       let cartElement = document.getElementById("cart");
+
+       cartElement.innerHTML = `<a href="#">Cart: ${cart}</a>`;
+
+       }
+       function ad2(){
+        Sum+=8999;
+       cart++;
+       Qty2++;
+        let quantity2=document.getElementById("quantity2");
+        
+        quantity2.innerHTML= `<p id="quantity2">Quantity: ${Qty2}</p>`
+       let cartElement = document.getElementById("cart");
+
+       cartElement.innerHTML = `<a href="#">Cart: ${cart}</a>`;
+
+       }
+       function ad3(){
+        Sum+=6999;
+       cart++;
+       Qty3++;
+        let quantity3=document.getElementById("quantity3");
+        
+        quantity3.innerHTML= `<p id="quantity3">Quantity: ${Qty3}</p>`
+       let cartElement = document.getElementById("cart");
+
+       cartElement.innerHTML = `<a href="#">Cart: ${cart}</a>`;
+
+       }
+       function ad4(){
+        Sum+=5999;
+       cart++;
+       Qty4++;
+        let quantity4=document.getElementById("quantity4");
+        
+        quantity4.innerHTML= `<p id="quantity4">Quantity: ${Qty4}</p>`
+       let cartElement = document.getElementById("cart");
+
+       cartElement.innerHTML = `<a href="#">Cart: ${cart}</a>`;
+
+       }
+       function ad5(){
+        Sum+=4999;
+       cart++;
+       Qty5++;
+        let quantity5=document.getElementById("quantity5");
+        
+        quantity5.innerHTML= `<p id="quantity5">Quantity: ${Qty5}</p>`
+       let cartElement = document.getElementById("cart");
+
+       cartElement.innerHTML = `<a href="#">Cart: ${cart}</a>`;
+
+       }
+       function sum(){
+        Qty++;
+        Sum+=6999;
+        let quantity=document.getElementById("quantity");
+        
+        quantity.innerHTML= `<p id="quantity">Quantity: ${Qty}</p>`
+       }
+       function minus(){
+        Qty--;
+        Sum-=6999;
+        let quantity=document.getElementById("quantity");
+        
+        quantity.innerHTML= `<p id="quantity">Quantity: ${Qty}</p>`
+       }
+        function sum1(){
+        Qty1++;
+        Sum+=7999;
+        let quantity=document.getElementById("quantity1");
+        
+        quantity.innerHTML= `<p id="quantity">Quantity: ${Qty1}</p>`
+       }
+       function minus1(){
+        Qty1--;
+        Sum-=7999;
+        let quantity=document.getElementById("quantity1");
+        
+        quantity.innerHTML= `<p id="quantity1">Quantity: ${Qty1}</p>`
+       } function sum2(){
+        Qty2++;
+        Sum+=8999;
+        let quantity=document.getElementById("quantity2");
+        
+        quantity.innerHTML= `<p id="quantity1">Quantity: ${Qty2}</p>`
+       }
+       function minus2(){
+        Qty2--;
+        Sum-=8999;
+        let quantity=document.getElementById("quantity2");
+        
+        quantity.innerHTML= `<p id="quantity2">Quantity: ${Qty2}</p>`
+       } function sum3(){
+        Qty3++;
+        Sum+=6999;
+        let quantity=document.getElementById("quantity3");
+        
+        quantity.innerHTML= `<p id="quantity2">Quantity: ${Qty3}</p>`
+       }
+       function minus3(){
+        Qty3--;
+        Sum-=6999;
+        let quantity=document.getElementById("quantity3");
+        
+        quantity.innerHTML= `<p id="quantity3">Quantity: ${Qty3}</p>`
+       } function sum4(){
+        Qty4++;
+        Sum+=5999;
+        let quantity=document.getElementById("quantity4");
+        
+        quantity.innerHTML= `<p id="quantity4">Quantity: ${Qty4}</p>`
+       }
+       function minus4(){
+        Qty4--;
+        Sum-=5999;
+        let quantity=document.getElementById("quantity4");
+        
+        quantity.innerHTML= `<p id="quantity4">Quantity: ${Qty4}</p>`
+       } function sum5(){
+        Qty5++;
+        Sum+=4999;
+        let quantity=document.getElementById("quantity5");
+        
+        quantity.innerHTML= `<p id="quantity5">Quantity: ${Qty5}</p>`
+       }
+       function minus5(){
+        Qty5--;
+        Sum-=4999;
+        let quantity=document.getElementById("quantity5");
+        
+        quantity.innerHTML= `<p id="quantity5">Quantity: ${Qty5}</p>`
+       }
+       let pay=document.getElementById("total");
+    </script>
+
+</body>
+</html>
